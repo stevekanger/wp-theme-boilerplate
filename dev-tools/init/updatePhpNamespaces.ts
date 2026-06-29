@@ -22,11 +22,13 @@ function replaceInFiles(
 
 /**
  * Updates the namespaces in php files
+ *
+ * @param phpNamespace The php namespace to set
  */
 export default function updatePhpNamespaces(phpNamespace: string) {
   const filesInc = getDirectoryFiles(getRootDir('inc', 'app'), true);
 
   [filesInc].forEach((files) => {
-    replaceInFiles(files, /WpThemeBoilerplate/g, phpNamespace);
+    replaceInFiles(files, /WpPluginBoilerplate/g, phpNamespace);
   });
 }

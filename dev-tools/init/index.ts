@@ -151,7 +151,6 @@ async function main() {
 
     // Remove unneeded files and folders
     try {
-      fs.unlinkSync(getRootDir('wp-plugin-boilerplate.php'));
       fs.rmSync(getRootDir('.git'), { recursive: true });
     } catch (err) {
       console.log(err);

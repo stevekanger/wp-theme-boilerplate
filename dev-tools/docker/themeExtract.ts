@@ -6,7 +6,7 @@ import commandLinePrompt from '../utils/commandLinePrompt';
 async function extractTheme() {
   const outputDir = ensureDistDir();
 
-  const containerName = getEnv('NAMESPACE');
+  const containerName = getEnv('SLUG');
   const themeName = await commandLinePrompt('Theme name: ');
 
   exec(
