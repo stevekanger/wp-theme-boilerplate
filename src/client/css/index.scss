@@ -1,0 +1,31 @@
+$breakpoint-sm: 576px;
+$breakpoint-md: 767px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+a,
+button {
+  transition: background 300ms ease-out;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.hidden-sm {
+  @media (max-width: $breakpoint-sm) {
+    display: none !important;
+  }
+}
+
+.hidden-md {
+  @media (max-width: $breakpoint-md) {
+    display: none !important;
+  }
+}
+
+.hidden-lg {
+  @media (max-width: $breakpoint-lg) {
+    display: none !important;
+  }
+}

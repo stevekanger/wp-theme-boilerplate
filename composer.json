@@ -1,0 +1,14 @@
+{
+  "name": "stevekanger/wp-theme-boilerplate",
+  "version": "0.1.0",
+  "description": "Modern wordpress theme boilerplate.",
+  "license": "GPL-2.0-or-later",
+  "autoload": {
+    "psr-4": {
+      "WpThemeBoilerplate\\": "inc/app/"
+    }
+  },
+  "require": {
+    "php": ">=8.3"
+  }
+}

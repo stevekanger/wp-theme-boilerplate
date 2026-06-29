@@ -1,0 +1,26 @@
+{
+  "name": "wp-theme-boilerplate",
+  "version": "0.1.0",
+  "description": "Boilerplate for wordpress block theme.",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "dev": "wp-scripts start",
+    "build": "wp-scripts build",
+    "archive:theme": "composer install --no-dev && wp-scripts build && ts-node ./dev-tools/archive/index.ts && composer install",
+    "archive:dev": "ts-node ./dev-tools/archive/index.ts dev",
+    "docker:shell": "./dev-tools/docker/shell.sh",
+    "docker:themes:list": "./dev-tools/docker/list-themes.sh",
+    "docker:themes:extract": "ts-node ./dev-tools/docker/themeExtract.ts"
+  },
+  "devDependencies": {
+    "@types/archiver": "^8.0.0",
+    "@types/mustache": "^4.2.6",
+    "@types/node": "^20.19.43",
+    "@wordpress/scripts": "^32.4.1",
+    "archiver": "^8.0.0",
+    "browser-sync-webpack-plugin": "^2.4.0",
+    "dotenv": "^17.4.2",
+    "mustache": "^4.2.0",
+    "ts-node": "^10.9.2"
+  }
+}
