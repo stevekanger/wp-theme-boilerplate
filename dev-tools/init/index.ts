@@ -1,6 +1,8 @@
 import fs from 'fs';
+import path from 'path';
 import commandLinePrompt from '../utils/commandLinePrompt';
 import getRootDir from '../utils/getRootDir';
+import getDirectoryFiles from './getDirectoryFiles';
 import {
   authorDescription,
   createInfoDescription,
@@ -87,6 +89,19 @@ async function prompt(
  */
 async function main() {
   try {
+    const templates = getDirectoryFiles(
+      path.join(__dirname, 'templates'),
+      false,
+    );
+
+    consoleColor(
+      PromptColors.yellow,
+      'Caution: ".git" folder will be deleted, default php namespaces (WpThemeBoilerplate) will be replaced, and the following files will be completely wiped and rebuilt.',
+    );
+    templates.forEach((template) =>
+      console.log(template.replace('.mustache', '')),
+    );
+
     await prompt(
       'Continue? (y/n): ',
       initDescription,
@@ -98,31 +113,31 @@ async function main() {
       'Title: ',
       titleDescription,
       validateIsSet('Title'),
-      PromptColors.green,
+      PromptColors.cyan,
     );
     const author = await prompt(
       'Author: ',
       authorDescription,
       validateIsSet('Author'),
-      PromptColors.green,
+      PromptColors.cyan,
     );
     const wordpressVersion = await prompt(
       'Wordrpess Version: ',
       wordpressVersionDescription,
       validateIsSet('Wordpress Version'),
-      PromptColors.green,
+      PromptColors.cyan,
     );
     const phpVersion = await prompt(
       'Php Version: ',
       phpVersionDescription,
       validateIsSet('Php Version'),
-      PromptColors.green,
+      PromptColors.cyan,
     );
     const phpNamespace = await prompt(
       'Php Namespace: ',
       phpNamespaceDescription,
       validateIsSet('Php Namespace'),
-      PromptColors.green,
+      PromptColors.cyan,
     );
     const slug = title.toLowerCase().replaceAll(' ', '-');
     const prefix = title.toLowerCase().replaceAll(' ', '_');
@@ -143,7 +158,7 @@ async function main() {
       'Is this correct? (y/n): ',
       createInfoDescription(templateVars),
       validateIsY('Info'),
-      PromptColors.green,
+      PromptColors.cyan,
     );
 
     updateTemplateFiles(templateVars);
@@ -152,11 +167,13 @@ async function main() {
     // Remove unneeded files and folders
     try {
       fs.rmSync(getRootDir('.git'), { recursive: true });
-    } catch (err) {
-      console.log(err);
-    }
+    } catch (err) { }
 
     consoleColor(PromptColors.green, '\nFinished');
+
+    console.log(
+      'Your project has been initialized.\nGo to style.css and readme.txt to add any other relevant information.',
+    );
   } catch (err) {
     consoleColor(PromptColors.red, (err as Error).message);
   }
