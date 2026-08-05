@@ -6,17 +6,27 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# For you mac users
+.DS_Store
+
 # Coverage directory used by tools like istanbul
 coverage
 
-# Compiled build
-build/
-
-# Distribution
-dist/
+# Leave out all build and vendor folders
+/build/
+/dist/
 
 # Dependency directories
 node_modules/
+vendor/
+
+# No environment variables or local config files
+/.env
+/docker-compose.override.yml
+
+# Cache files.
+/.phpunit.result.cache
+/.php-cs-fixer.cache
 
 # Optional npm cache directory
 .npm
@@ -29,7 +39,3 @@ node_modules/
 
 # Output of `wp-scripts plugin-zip`
 *.zip
-
-# dotenv environment variables file
-.env
-

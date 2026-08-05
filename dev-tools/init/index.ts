@@ -98,6 +98,7 @@ async function main() {
       PromptColors.yellow,
       'Caution: ".git" folder will be deleted, default php namespaces (WpThemeBoilerplate) will be replaced, and the following files will be completely wiped and rebuilt.',
     );
+
     templates.forEach((template) =>
       console.log(template.replace('.mustache', '')),
     );
