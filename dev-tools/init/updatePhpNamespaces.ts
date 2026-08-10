@@ -29,6 +29,6 @@ export default function updatePhpNamespaces(phpNamespace: string) {
   const filesInc = getDirectoryFiles(getRootDir('inc', 'app'), true);
 
   [filesInc].forEach((files) => {
-    replaceInFiles(files, /WpPluginBoilerplate/g, phpNamespace);
+    replaceInFiles(files, /WpThemeBoilerplate/g, phpNamespace);
   });
 }
