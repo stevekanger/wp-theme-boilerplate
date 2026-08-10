@@ -11,7 +11,7 @@ All raw js, css, and blocks reside in `src`. These are files that need to be bui
 ## Installation
 
 ```bash
-git clone https://github.com/stevekanger/wp-plugin-boilerplate
+git clone https://github.com/stevekanger/wp-theme-boilerplate
 
 ```
 
