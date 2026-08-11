@@ -515,8 +515,8 @@
         }
       },
       "core/separator": {
-        "border": {
-          "color": "var:preset|color|text-primary"
+        "color": {
+          "background": "var:preset|color|text-primary"
         }
       },
       "core/group": {
