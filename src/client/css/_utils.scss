@@ -1,0 +1,23 @@
+@use 'vars';
+
+.hidden {
+  display: none !important;
+}
+
+.hidden-sm {
+  @media (max-width: vars.$breakpoint-sm) {
+    display: none !important;
+  }
+}
+
+.hidden-md {
+  @media (max-width: vars.$breakpoint-md) {
+    display: none !important;
+  }
+}
+
+.hidden-lg {
+  @media (max-width: vars.$breakpoint-lg) {
+    display: none !important;
+  }
+}
