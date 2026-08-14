@@ -94,7 +94,7 @@
         "md": 1.4,
         "lg": 1.45,
         "xl": 1.6,
-        "2xl": 1.8
+        "2-xl": 1.8
       },
       "borderRadius": {
         "xs": "0.125rem",
@@ -102,7 +102,7 @@
         "md": "0.375rem ",
         "lg": "0.5rem",
         "xl": "0.75rem",
-        "2xl": "1rem",
+        "2-xl": "1rem",
         "full": "9999px"
       }
     },
@@ -126,37 +126,37 @@
       "spacingSizes": [
         {
           "name": "xs",
-          "slug": "20",
+          "slug": "xs",
           "size": "0.25rem"
         },
         {
           "name": "sm",
-          "slug": "30",
+          "slug": "sm",
           "size": "0.5rem"
         },
         {
           "name": "md",
-          "slug": "40",
+          "slug": "md",
           "size": "1rem"
         },
         {
           "name": "lg",
-          "slug": "50",
+          "slug": "lg",
           "size": "1.5rem"
         },
         {
           "name": "xl",
-          "slug": "60",
+          "slug": "xl",
           "size": "3rem"
         },
         {
           "name": "2xl",
-          "slug": "70",
+          "slug": "2-xl",
           "size": "5rem"
         },
         {
           "name": "3xl",
-          "slug": "80",
+          "slug": "3-xl",
           "size": "10rem"
         }
       ]
@@ -235,49 +235,65 @@
               ]
             }
           ]
+        },
+        {
+          "fontFamily": "\"DrukWideSuper\", sans-serif",
+          "name": "Druk Wide Super",
+          "slug": "druk-wide-super",
+          "fontFace": [
+            {
+              "fontFamily": "DrukWideSuper",
+              "fontStretch": "",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "src": [
+                "file:./assets/fonts/DrukWideSuper/DrukWideSuper.woff2"
+              ]
+            }
+          ]
         }
       ],
       "fontSizes": [
         {
-          "name": "Small",
+          "name": "sm",
           "size": "clamp(14px, 1.6vw, 16px)",
-          "slug": "small",
+          "slug": "sm",
           "fluid": {
             "min": "14px",
             "max": "16px"
           }
         },
         {
-          "name": "Medium",
+          "name": "md",
           "size": "clamp(16px, 1.8vw, 18px)",
-          "slug": "medium",
+          "slug": "md",
           "fluid": {
             "min": "16px",
             "max": "18px"
           }
         },
         {
-          "name": "Large",
+          "name": "lg",
           "size": "clamp(20px, 2.4vw, 24px)",
-          "slug": "large",
+          "slug": "lg",
           "fluid": {
             "min": "20px",
             "max": "24px"
           }
         },
         {
-          "name": "X Large",
+          "name": "xl",
           "size": "clamp(24px, 3.2vw, 32px)",
-          "slug": "x-large",
+          "slug": "xl",
           "fluid": {
             "min": "24px",
             "max": "32px"
           }
         },
         {
-          "name": "XX Large",
+          "name": "2xl",
           "size": "clamp(30px, 4vw, 40px)",
-          "slug": "xx-large",
+          "slug": "2-xl",
           "fluid": {
             "min": "32px",
             "max": "40px"
@@ -292,7 +308,7 @@
       "text": "var:preset|color|text-primary"
     },
     "spacing": {
-      "blockGap": "var:preset|spacing|50",
+      "blockGap": "0px",
       "margin": {
         "bottom": "0px",
         "left": "0px",
@@ -307,10 +323,10 @@
       }
     },
     "typography": {
-      "fontSize": "var:preset|font-size|medium",
+      "fontSize": "var:preset|font-sizes|md",
       "fontFamily": "var:preset|font-family|inter",
-      "fontWeight": "var:preset|font-weight|medium",
-      "lineHeight": "var:preset|line-height|xl"
+      "fontWeight": "var:custom|font-weight|medium",
+      "lineHeight": "var:custom|line-height|xl"
     },
     "elements": {
       "link": {
@@ -328,9 +344,9 @@
       },
       "button": {
         "typography": {
-          "fontSize": "var:preset|font-size|medium",
-          "fontWeight": "var:preset|font-weight|medium",
-          "lineHeight": "var:preset|line-height|initial"
+          "fontSize": "var:preset|font-size|md",
+          "fontWeight": "var:custom|font-weight|medium",
+          "lineHeight": "var:custom|line-height|initial"
         },
         "color": {
           "background": "var:preset|color|transparent",
@@ -354,93 +370,104 @@
       },
       "h1": {
         "typography": {
-          "fontSize": "var:preset|font-size|xx-large",
-          "fontWeight": "var:preset|font-weight|semi-bold",
-          "lineHeight": "var:preset|line-height|xs",
+          "fontSize": "var:preset|font-size|2-xl",
+          "fontWeight": "var:custom|font-weight|semi-bold",
+          "lineHeight": "var:custom|line-height|xs",
           "letterSpacing": "-2px"
         },
         "spacing": {
           "margin": {
-            "top": "var:preset|spacing|40",
-            "bottom": "var:preset|spacing|40"
+            "top": "var:preset|spacing|md",
+            "bottom": "var:preset|spacing|md"
           }
         }
       },
       "h2": {
         "typography": {
-          "fontSize": "var:preset|font-size|x-large",
-          "fontWeight": "var:preset|font-weight|semi-bold",
-          "lineHeight": "var:preset|line-height|xs",
+          "fontSize": "var:preset|font-size|xl",
+          "fontWeight": "var:custom|font-weight|semi-bold",
+          "lineHeight": "var:custom|line-height|xs",
           "letterSpacing": "-1px"
         },
         "spacing": {
           "margin": {
-            "top": "var:preset|spacing|40",
-            "bottom": "var:preset|spacing|40"
+            "top": "var:preset|spacing|md",
+            "bottom": "var:preset|spacing|md"
           }
         }
       },
       "h3": {
         "typography": {
-          "fontSize": "var:preset|font-size|large",
-          "fontWeight": "var:preset|font-weight|semi-bold",
-          "lineHeight": "var:preset|line-height|sm",
+          "fontSize": "var:preset|font-size|lg",
+          "fontWeight": "var:custom|font-weight|semi-bold",
+          "lineHeight": "var:custom|line-height|sm",
           "letterSpacing": "-0.5px"
         },
         "spacing": {
           "margin": {
-            "top": "var:preset|spacing|40",
-            "bottom": "var:preset|spacing|40"
+            "top": "var:preset|spacing|md",
+            "bottom": "var:preset|spacing|md"
           }
         }
       },
       "h4": {
         "typography": {
-          "fontSize": "var:preset|font-size|medium",
-          "fontWeight": "var:preset|font-weight|semi-bold",
-          "lineHeight": "var:preset|line-height|sm",
+          "fontSize": "var:preset|font-size|md",
+          "fontWeight": "var:custom|font-weight|semi-bold",
+          "lineHeight": "var:custom|line-height|sm",
           "letterSpacing": "-0.25px"
         },
         "spacing": {
           "margin": {
-            "top": "var:preset|spacing|40",
-            "bottom": "var:preset|spacing|40"
+            "top": "var:preset|spacing|md",
+            "bottom": "var:preset|spacing|md"
           }
         }
       },
       "h5": {
         "typography": {
-          "fontSize": "var:preset|font-size|small",
-          "fontWeight": "var:preset|font-weight|semi-bold",
-          "lineHeight": "var:preset|line-height|lg"
+          "fontSize": "var:preset|font-size|sm",
+          "fontWeight": "var:custom|font-weight|semi-bold",
+          "lineHeight": "var:custom|line-height|lg"
         },
         "spacing": {
           "margin": {
-            "top": "var:preset|spacing|40",
-            "bottom": "var:preset|spacing|40"
+            "top": "var:preset|spacing|md",
+            "bottom": "var:preset|spacing|md"
           }
         }
       },
       "h6": {
         "typography": {
-          "fontSize": "var:preset|font-size|small",
-          "fontWeight": "var:preset|font-weight|semi-bold",
-          "lineHeight": "var:preset|line-height|lg"
+          "fontSize": "var:preset|font-size|sm",
+          "fontWeight": "var:custom|font-weight|semi-bold",
+          "lineHeight": "var:custom|line-height|lg"
         },
         "spacing": {
           "margin": {
-            "top": "var:preset|spacing|40",
-            "bottom": "var:preset|spacing|40"
+            "top": "var:preset|spacing|md",
+            "bottom": "var:preset|spacing|md"
           }
         }
       }
     },
     "blocks": {
+      "core/paragraph": {
+        "spacing": {
+          "blockGap": "var:preset|spacing|md",
+          "margin": {
+            "bottom": "var:preset|spacing|md",
+            "left": "0px",
+            "right": "0px",
+            "top": "var:preset|spacing|md"
+          }
+        }
+      },
       "core/site-title": {
         "typography": {
-          "fontSize": "var:preset|font-size|medium",
-          "fontWeight": "var:preset|font-weight|semi-bold",
-          "lineHeight": "var:preset|line-height|xl",
+          "fontSize": "var:preset|font-size|md",
+          "fontWeight": "var:custom|font-weight|semi-bold",
+          "lineHeight": "var:custom|line-height|xl",
           "letterSpacing": "0"
         },
         "spacing": {
@@ -466,13 +493,13 @@
       },
       "core/navigation": {
         "typography": {
-          "fontSize": "var:preset|font-size|medium",
-          "fontWeight": "var:preset|font-weight|medium",
-          "lineHeight": "var:preset|line-height|lg",
+          "fontSize": "var:preset|font-size|md",
+          "fontWeight": "var:custom|font-weight|medium",
+          "lineHeight": "var:custom|line-height|lg",
           "letterSpacing": "0.25px"
         },
         "spacing": {
-          "blockGap": "var:preset|spacing|30"
+          "blockGap": "var:preset|spacing|sm"
         },
         "elements": {
           "link": {
@@ -489,24 +516,24 @@
       },
       "core/post-terms": {
         "typography": {
-          "fontSize": "var:preset|font-size|small"
+          "fontSize": "var:preset|font-size|sm"
         }
       },
       "core/post-author": {
         "typography": {
-          "fontSize": "var:preset|font-size|small"
+          "fontSize": "var:preset|font-size|sm"
         }
       },
       "core/post-date": {
         "typography": {
-          "fontSize": "var:preset|font-size|small"
+          "fontSize": "var:preset|font-size|sm"
         }
       },
       "core/search": {
         "typography": {
-          "fontSize": "var:preset|font-size|medium",
-          "fontWeight": "var:preset|font-weight|medium",
-          "lineHeight": "var:preset|line-height|initial"
+          "fontSize": "var:preset|font-size|md",
+          "fontWeight": "var:custom|font-weight|medium",
+          "lineHeight": "var:custom|line-height|initial"
         },
         "color": {
           "text": "var:preset|color|text-primary"

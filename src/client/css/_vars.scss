@@ -19,6 +19,13 @@ $breakpoint-xl: 1200px;
 /* Fonts */
 $font-inter: var(--wp--preset--font-family--inter);
 
+/* Font Sizes */
+$font-size-sm: var(--wp--preset--font-size--sm);
+$font-size-md: var(--wp--preset--font-size--md);
+$font-size-lg: var(--wp--preset--font-size--lg);
+$font-size-xl: var(--wp--preset--font-size--xl);
+$font-size-2xl: var(--wp--preset--font-size--2-xl);
+
 /* Font Weights */
 $font-weight-black: var(--wp--custom--font-weight--black);
 $font-weight-extraBold: var(--wp--custom--font-weight--extra-bold);
@@ -37,7 +44,7 @@ $line-height-sm: var(--wp--custom--line-height--sm);
 $line-height-md: var(--wp--custom--line-height--md);
 $line-height-lg: var(--wp--custom--line-height--lg);
 $line-height-xl: var(--wp--custom--line-height--xl);
-$line-height-2xl: var(--wp--custom--line-height--2xl);
+$line-height-2xl: var(--wp--custom--line-height--2-xl);
 
 /* Border Radius */
 $border-radius-full: var(--wp--custom--border-radius--full);
@@ -46,13 +53,13 @@ $border-radius-sm: var(--wp--custom--border-radius--sm);
 $border-radius-md: var(--wp--custom--border-radius--md);
 $border-radius-lg: var(--wp--custom--border-radius--lg);
 $border-radius-xl: var(--wp--custom--border-radius--xl);
-$border-radius-2xl: var(--wp--custom--border-radius--2xl);
+$border-radius-2xl: var(--wp--custom--border-radius--2-xl);
 
 /* Spacing */
-$spacing-xs: var(--wp--preset--spacing--20);
-$spacing-sm: var(--wp--preset--spacing--30);
-$spacing-md: var(--wp--preset--spacing--40);
-$spacing-lg: var(--wp--preset--spacing--50);
-$spacing-xl: var(--wp--preset--spacing--60);
-$spacing-2xl: var(--wp--preset--spacing--70);
-$spacing-3xl: var(--wp--preset--spacing--80);
+$spacing-xs: var(--wp--preset--spacing--xs);
+$spacing-sm: var(--wp--preset--spacing--sm);
+$spacing-md: var(--wp--preset--spacing--md);
+$spacing-lg: var(--wp--preset--spacing--lg);
+$spacing-xl: var(--wp--preset--spacing--xl);
+$spacing-2xl: var(--wp--preset--spacing--2-xl);
+$spacing-3xl: var(--wp--preset--spacing--3-xl);
