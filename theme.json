@@ -499,7 +499,7 @@
           "letterSpacing": "0.25px"
         },
         "spacing": {
-          "blockGap": "var:preset|spacing|sm"
+          "blockGap": "var:preset|spacing|md"
         },
         "elements": {
           "link": {
