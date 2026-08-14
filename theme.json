@@ -323,7 +323,7 @@
       }
     },
     "typography": {
-      "fontSize": "var:preset|font-sizes|md",
+      "fontSize": "var:preset|font-size|md",
       "fontFamily": "var:preset|font-family|inter",
       "fontWeight": "var:custom|font-weight|medium",
       "lineHeight": "var:custom|line-height|xl"
