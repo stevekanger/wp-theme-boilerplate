@@ -345,7 +345,7 @@
       "button": {
         "typography": {
           "fontSize": "var:preset|font-size|md",
-          "fontWeight": "var:custom|font-weight|medium",
+          "fontWeight": "var:custom|font-weight|regular",
           "lineHeight": "var:custom|line-height|initial"
         },
         "color": {
@@ -494,7 +494,7 @@
       "core/navigation": {
         "typography": {
           "fontSize": "var:preset|font-size|md",
-          "fontWeight": "var:custom|font-weight|medium",
+          "fontWeight": "var:custom|font-weight|regular",
           "lineHeight": "var:custom|line-height|lg",
           "letterSpacing": "0.25px"
         },
@@ -532,7 +532,7 @@
       "core/search": {
         "typography": {
           "fontSize": "var:preset|font-size|md",
-          "fontWeight": "var:custom|font-weight|medium",
+          "fontWeight": "var:custom|font-weight|regular",
           "lineHeight": "var:custom|line-height|initial"
         },
         "color": {
