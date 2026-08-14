@@ -82,7 +82,7 @@
         "bold": 700,
         "semiBold": 600,
         "medium": 500,
-        "normal": 400,
+        "regular": 400,
         "light": 300,
         "extraLight": 200,
         "thin": 100
@@ -325,7 +325,7 @@
     "typography": {
       "fontSize": "var:preset|font-size|md",
       "fontFamily": "var:preset|font-family|inter",
-      "fontWeight": "var:custom|font-weight|normal",
+      "fontWeight": "var:custom|font-weight|regular",
       "lineHeight": "var:custom|line-height|xl"
     },
     "elements": {
