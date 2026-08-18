@@ -1,0 +1,20 @@
+@use 'variables' as *;
+@use 'functions' as *;
+
+@mixin media-max($breakpoint) {
+  @media (width <=breakpoint($breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-min($breakpoint) {
+  @media (width >=breakpoint($breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-between($breakpoint-min, $breakpoint-max) {
+  @media (breakpoint($breakpoint-min) <=width <=breakpoint($breakpoint-max)) {
+    @content;
+  }
+}

@@ -1,6 +1,16 @@
+/* Mobile Breakpoints */
+$breakpoints: (
+  'sm-max': 599px,
+  'md-min': 600px,
+  'md-max': 992px,
+  'lg-min': 993px,
+  'lg-max': 1199px,
+  'xl-min': 1200px,
+);
+
 /* Colors */
-$color-white: #ffffff;
-$color-black: #000000;
+$color-white: var(--wp--preset--color-white);
+$color-black: var(--wp--preset--color-black);
 $color-background-primary: var(--wp--preset--color--background-primary);
 $color-background-secondary: var(--wp--preset--color--background-secondary);
 $color-text-primary: var(--wp--preset--color--text-primary);
@@ -9,12 +19,6 @@ $color-primary: var(--wp--preset--color--primary);
 $color-primary-70: color-mix(in srgb, $color-primary 70%, $color-white);
 $color-secondary: var(--wp--preset--color--secondary);
 $color-secondary-70: color-mix(in srgb, $color-secondary 70%, $color-white);
-
-/* Mobile Breakpoints */
-$breakpoint-sm: 599px;
-$breakpoint-md: 767px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
 
 /* Fonts */
 $font-inter: var(--wp--preset--font-family--inter);

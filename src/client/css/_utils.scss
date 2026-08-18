@@ -1,23 +1,23 @@
-@use 'vars';
+@use 'abstracts' as *;
 
 .hidden {
   display: none !important;
 }
 
 .hidden-sm {
-  @media (max-width: vars.$breakpoint-sm) {
+  @include media-max('sm-max') {
     display: none !important;
   }
 }
 
 .hidden-md {
-  @media (max-width: vars.$breakpoint-md) {
+  @include media-max('md-max') {
     display: none !important;
   }
 }
 
 .hidden-lg {
-  @media (max-width: vars.$breakpoint-lg) {
+  @include media-max('lg-max') {
     display: none !important;
   }
 }

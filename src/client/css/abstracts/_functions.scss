@@ -1,0 +1,12 @@
+@use 'variables' as *;
+@use 'sass:map';
+
+@function breakpoint($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    $value: map.get($breakpoints, $breakpoint);
+
+    @return $value;
+  }
+
+  @error "Unknown breakpoint: #{$breakpoint}.";
+}
