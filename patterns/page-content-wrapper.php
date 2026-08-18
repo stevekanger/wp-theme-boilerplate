@@ -8,6 +8,6 @@
  */
 ?>
 
-<!-- wp:group {"metadata":{"name":"Page Content Wrapper"},"className":"page-content-wrapper","style":{"spacing":{"padding":{"top":"var:preset|spacing|2-xl","bottom":"var:preset|spacing|2-xl"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group page-content-wrapper" style="padding-top:var(--wp--preset--spacing--2-xl);padding-bottom:var(--wp--preset--spacing--2-xl)"></div>
+<!-- wp:group {"metadata":{"name":"Page Content Wrapper"},"className":"page-content-wrapper","layout":{"type":"constrained"}} -->
+<div class="wp-block-group page-content-wrapper"></div>
 <!-- /wp:group -->
