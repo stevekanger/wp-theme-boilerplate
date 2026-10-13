@@ -1,2 +1,3 @@
-import "./css/index.scss";
+import './css/index.scss';
 
+console.log('Hello from the admin script');

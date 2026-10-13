@@ -1,85 +1,79 @@
-# Wordpress block theme boilerplate
+# Wp Theme Boilerplate
 
-Simple starter theme to get started writing wordpress block themes
+Wp theme boilerplate.
 
-## Folder structure
+Modern WordPress theme featuring Composer autoloading, Docker support, and Webpack build pipeline.
 
-All php files reside in `inc`. All `psr-4` classes will be autoloaded via `composer` from the `app` folder.
+## Structure
+
+All php files reside in `inc`. All `psr-4` classes will be autoloaded via `composer` from the `inc/app` folder. Controllers are your connection to wordpress by registering hooks, etc. Services are your business logic and can be bound and retrieved from the service container. Both Controllers and Services have access to the service container.
 
 All raw js, css, and blocks reside in `src`. These are files that need to be built during the build process.
-
-## Installation
-
-```bash
-git clone https://github.com/stevekanger/wp-theme-boilerplate
-
-```
-
-first run
-
-```bash
-npm install
-
-```
-
-Then you can run the init script to bootstrap your plugin. This will prompt you for your information.
-
-```bash
-npx ts-node ./dev-tools/init
-
-```
-
-After running the init script you can then run.
-
-```bash
-composer install
-
-composer dump-autoload
-
-```
-
-And now your plugin is set up. You still need to go your entry php file and finish filling out the header with the rest of your information.
 
 ## Usage
 
 ### Docker
 
-This plugin has docker set up to control the development environment. You don't have to use docker but its definitely recommended to ensure your plugin works with your target Wordpress/Php versions. You must have `docker` and `docker-compose` installed.
+Docker set up to control the development environment. You must have `docker` and `docker-compose` installed.
 
-The `debug.log` file from the container is also set to appear in the plugins root directory for easy debugging. Docker env variables for php and wordpress versions will be set when running the init script.
+Docker env variables for php and wordpress versions will be set in `.env`. The wordpress `debug.log` file from the docker container will be placed in the projects root directory.
 
 ### Dev Scripts
 
-Build run.
+To build.
 
 ```bash
 npm run build
 
 ```
 
-Development run.
+To develop.
 
 ```bash
+docker compose up -d
+
 npm run dev
 
 ```
 
-To archive your plugin for distribution run.
+To archive for distribution.
 
 ```bash
-npm run archive:plugin
+npm run archive:dist
 
 ```
 
-To archive your entire development version of the plugin. This can be handy if your developing for a client and need to ship the entire plugin contents.
+To archive the entire development package.
 
 ```bash
 npm run archive:dev
 
 ```
 
+## Testing
+
+Js testing is done with `vitest` and php testing is done with `phpunit` and the wordpress phpunit test suite.
+
+for js run
+
+```bash
+npm run test
+```
+
+for php run
+
+```bash
+composer test
+```
+
+The wordpress testing suits are installed from `https://develop.svn.wordpress.org/tags`. It will be installed via custom composer repository and use whatever wordpress version you picked when running the init script.
+
 ## Updating php and wordpress versions
 
 The choice is up to you how you want to keep your plugin current. In `.env` you can specify your php and wordpress versions.
 
-For every wordpress release in the future you will need to update the `composer.json` wordpress testing suite manually. So if you change versions in your `.env` file for docker you would want to update `composer.json` to match your wordpress version. Then run `composer update`.
+For every wordpress release in the future you will need to update the `composer.json` wordpress testing suite manually to match the version in `.env`. Then run `composer update`.
+
+## License
+
+This software is licensed under the GNU General Public License v2.0 or later. See `license.txt` for more information.

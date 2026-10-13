@@ -1,23 +1,26 @@
-== Wordpress Theme Boilerplate ==
-Contributors: Steve Kanger
-Requires at least: 7.0
-Tested up to: 7.0
+== Wp Theme Boilerplate ==
+Contributors: stevekanger
+Requires at least: 7.1.3
+Tested up to: 7.1.3
 Requires PHP: 8.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A starter theme built with Wordpress Blocks
+Wp theme boilerplate.
+
+== Description ==
+
+Wp theme boilerplate.
 
 == Changelog ==
 
 = 0.1.0 =
-
-- Initial release
+* Initial release.
 
 == Copyright ==
 
-Block Theme Starter WordPress Theme, (C) 2025 Steve Kanger
-Block Theme Starter is distributed under the terms of the GNU GPL.
+Wp Theme Boilerplate, (C) 2026 Steve Kanger
+Wp Theme Boilerplate is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

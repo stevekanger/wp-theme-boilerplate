@@ -1,26 +1,34 @@
 {
   "name": "wp-theme-boilerplate",
   "version": "0.1.0",
-  "description": "Boilerplate for wordpress block theme.",
+  "description": "Wp theme boilerplate.",
   "license": "GPL-2.0-or-later",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22.22.2"
+  },
+  "allowScripts": {
+    "unrs-resolver": true,
+    "@parcel/watcher": true,
+    "core-js": false,
+    "core-js-pure": false
+  },
   "scripts": {
+    "test": "vitest",
     "dev": "wp-scripts start",
     "build": "wp-scripts build",
-    "archive:theme": "composer install --no-dev && wp-scripts build && ts-node ./dev-tools/archive/index.ts && composer install",
-    "archive:dev": "ts-node ./dev-tools/archive/index.ts dev",
-    "docker:shell": "./dev-tools/docker/shell.sh",
-    "docker:themes:list": "./dev-tools/docker/list-themes.sh",
-    "docker:themes:extract": "ts-node ./dev-tools/docker/themeExtract.ts"
+    "archive:dist": "composer install --no-dev && wp-scripts build && wp-dev-tools archive --type dist && composer install",
+    "archive:dev": "wp-dev-tools archive --type dev",
+    "docker:shell": "docker exec -it wp-theme-boilerplate-wordpress /bin/bash",
+    "docker:extract": "wp-dev-tools dockerExtract --container wp-theme-boilerplate-wordpress",
+    "copy": "wp-dev-tools copy"
   },
   "devDependencies": {
-    "@types/archiver": "^8.0.0",
-    "@types/mustache": "^4.2.6",
-    "@types/node": "^20.19.43",
-    "@wordpress/scripts": "^32.4.1",
-    "archiver": "^8.0.0",
+    "vitest": "^5.0.2",
+    "@stevekanger/wp-dev-tools": "^0.1.7",
+    "@wordpress/scripts": "^36.0.0",
     "browser-sync-webpack-plugin": "^2.4.0",
-    "dotenv": "^17.4.2",
-    "mustache": "^4.2.0",
-    "ts-node": "^10.9.2"
+    "dotenv": "^18.0.4",
+    "typescript": "^6.0.3"
   }
 }

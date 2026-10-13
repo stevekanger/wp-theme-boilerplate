@@ -3,15 +3,5 @@
   "singleQuote": true,
   "tabWidth": 2,
   "printWidth": 80,
-  "semi": true,
-  "overrides": [
-    {
-      "files": [
-        "*.blade.php"
-      ],
-      "options": {
-        "parser": "blade"
-      }
-    }
-  ]
+  "semi": true
 }

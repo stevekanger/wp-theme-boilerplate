@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Footer copyright
- * Slug: wp-plugin-boilerplate/site-copyright
+ * Slug: wp-theme-boilerplate/site-copyright
  * Description: Paragraph with the site's copyright and site name
  * Categories: text
  * Keywords: footer, copyright
