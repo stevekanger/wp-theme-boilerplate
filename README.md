@@ -1,6 +1,6 @@
 # Wp Theme Boilerplate
 
-Wp theme boilerplate.
+**Themes should now be scaffoled with the following** [Wp Dev Tools](https://github.com/stevekanger/wp-dev-tools)
 
 Modern WordPress theme featuring Composer autoloading, Docker support, and Webpack build pipeline.
 
