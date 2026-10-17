@@ -3,9 +3,6 @@
 declare(strict_types=1);
 
 $root_dir = dirname(__FILE__, 3);
-$env = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
-$env->load();
-
 $entry_file_name = 'functions.php';
 $entry_file_path = $root_dir . '/' . $entry_file_name;
 $wordpress_tests_phpunit = $root_dir . '/vendor/wordpress/wordpress-tests-phpunit';
