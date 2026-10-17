@@ -1,4 +1,7 @@
 {
+  "slug": "wp-theme-boilerplate",
+  "prefix": "wp_theme_boilerplate",
+  "phpNamespace": "WpThemeBoilerplate",
   "main": "style.css",
   "files": {
     "dist": [
