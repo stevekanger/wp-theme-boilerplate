@@ -15,12 +15,12 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 // Initialize the app config information.
 AppConfig::init(
-    get_file_data(__DIR__ . '/style.css', ['Version' => 'Version'])['Version'] ?: '0.1.0',
-    __DIR__,
-    __FILE__,
-    'Wp Theme Boilerplate',
-    'wp_theme_boilerplate',
-    'wp-theme-boilerplate',
+    version: get_file_data(__DIR__ . '/style.css', ['Version' => 'Version'])['Version'] ?: '0.1.0',
+    root_dir: __DIR__,
+    root_file: __FILE__,
+    title: 'Wp Theme Boilerplate',
+    prefix: 'wp_theme_boilerplate',
+    slug: 'wp-theme-boilerplate',
 );
 
 // Create the service container
